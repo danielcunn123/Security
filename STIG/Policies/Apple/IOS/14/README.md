@@ -14,66 +14,66 @@ Created due to no avaliable DISA STIG compliant iOS mobileconfig AIO package des
 
 Feature Name | Enabled/Disabled
 ------------ | ---------------- |
-AirDrop | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/7a7bf9fd1930359e7825124d8c1f05ceb14a18e1.png" alt="FeatureDisabled" width="17px"/>
-AirPlay Incoming Pairing Password | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/0d94f7b6e1f8e960277d258b4cb1cc43a50ff326.png" alt="FeatureEnabled" width="17px"/>
-Air Play Outgoing Pairing Password | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/0d94f7b6e1f8e960277d258b4cb1cc43a50ff326.png" alt="FeatureEnabled" width="17px"/>
-AirPlay Incoming Requests | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/0d94f7b6e1f8e960277d258b4cb1cc43a50ff326.png" alt="FeatureEnabled" width="17px"/>
-App Installation | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/0d94f7b6e1f8e960277d258b4cb1cc43a50ff326.png" alt="FeatureEnabled" width="17px"/>
-App Removal | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/0d94f7b6e1f8e960277d258b4cb1cc43a50ff326.png" alt="FeatureEnabled" width="17px"/>
-Apple Personalized Advertising | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/7a7bf9fd1930359e7825124d8c1f05ceb14a18e1.png" alt="FeatureDisabled" width="17px"/>
-Assistant Siri | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/0d94f7b6e1f8e960277d258b4cb1cc43a50ff326.png" alt="FeatureEnabled" width="17px"/>
-Assistant (Siri) While Locked | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/7a7bf9fd1930359e7825124d8c1f05ceb14a18e1.png" alt="FeatureDisabled" width="17px"/>
-Automatic App Downloads | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/0d94f7b6e1f8e960277d258b4cb1cc43a50ff326.png" alt="FeatureEnabled" width="17px"/>
-Camera | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/0d94f7b6e1f8e960277d258b4cb1cc43a50ff326.png" alt="FeatureEnabled" width="17px"/>
-Chat (iMessage) | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/0d94f7b6e1f8e960277d258b4cb1cc43a50ff326.png" alt="FeatureEnabled" width="17px"/>
-Cloud Backup | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/7a7bf9fd1930359e7825124d8c1f05ceb14a18e1.png" alt="FeatureDisabled" width="17px"/>
-Cloud Document Sync | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/7a7bf9fd1930359e7825124d8c1f05ceb14a18e1.png" alt="FeatureDisabled" width="17px"/>
-Cloud Keychain Sync | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/7a7bf9fd1930359e7825124d8c1f05ceb14a18e1.png" alt="FeatureDisabled" width="17px"/>
-Cloud Photo Library | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/7a7bf9fd1930359e7825124d8c1f05ceb14a18e1.png" alt="FeatureDisabled" width="17px"/>
-Definition Lookup | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/0d94f7b6e1f8e960277d258b4cb1cc43a50ff326.png" alt="FeatureEnabled" width="17px"/>
-Device Name Modification | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/0d94f7b6e1f8e960277d258b4cb1cc43a50ff326.png" alt="FeatureEnabled" width="17px"/>
-Diagnostic Submission | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/7a7bf9fd1930359e7825124d8c1f05ceb14a18e1.png" alt="FeatureDisabled" width="17px"/>
-Dictation | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/0d94f7b6e1f8e960277d258b4cb1cc43a50ff326.png" alt="FeatureEnabled" width="17px"/>
-Encrypted Backup | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/0d94f7b6e1f8e960277d258b4cb1cc43a50ff326.png" alt="FeatureEnabled" width="17px"/>
-Enterprise App Trust | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/7a7bf9fd1930359e7825124d8c1f05ceb14a18e1.png" alt="FeatureDisabled" width="17px"/>
-Erase Content And Settings | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/0d94f7b6e1f8e960277d258b4cb1cc43a50ff326.png" alt="FeatureEnabled" width="17px"/>
-Files Network Drive Access | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/7a7bf9fd1930359e7825124d8c1f05ceb14a18e1.png" alt="FeatureDisabled" width="17px"/>
-Files USB Drive Access | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/7a7bf9fd1930359e7825124d8c1f05ceb14a18e1.png" alt="FeatureDisabled" width="17px"/>
-Find My Device | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/7a7bf9fd1930359e7825124d8c1f05ceb14a18e1.png" alt="FeatureDisabled" width="17px"/>
-Find My Friends | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/7a7bf9fd1930359e7825124d8c1f05ceb14a18e1.png" alt="FeatureDisabled" width="17px"/>
-Fingerprint For Unlock | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/0d94f7b6e1f8e960277d258b4cb1cc43a50ff326.png" alt="FeatureEnabled" width="17px"/>
-Game Center | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/0d94f7b6e1f8e960277d258b4cb1cc43a50ff326.png" alt="FeatureEnabled" width="17px"/>
-InApp Purchases | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/0d94f7b6e1f8e960277d258b4cb1cc43a50ff326.png" alt="FeatureEnabled" width="17px"/>
-iTunes | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/0d94f7b6e1f8e960277d258b4cb1cc43a50ff326.png" alt="FeatureEnabled" width="17px"/>
-Limit Ad Tracking | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/0d94f7b6e1f8e960277d258b4cb1cc43a50ff326.png" alt="FeatureEnabled" width="17px"/>
-Lock Screen Notifications View | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/7a7bf9fd1930359e7825124d8c1f05ceb14a18e1.png" alt="FeatureDisabled" width="17px"/>
-Managed Apps Cloud Sync | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/7a7bf9fd1930359e7825124d8c1f05ceb14a18e1.png" alt="FeatureDisabled" width="17px"/>
-Multiplayer Gaming | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/0d94f7b6e1f8e960277d258b4cb1cc43a50ff326.png" alt="FeatureEnabled" width="17px"/>
-Music Service | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/0d94f7b6e1f8e960277d258b4cb1cc43a50ff326.png" alt="FeatureEnabled" width="17px"/>
-News | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/0d94f7b6e1f8e960277d258b4cb1cc43a50ff326.png" alt="FeatureEnabled" width="17px"/>
-Paired Watch | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/7a7bf9fd1930359e7825124d8c1f05ceb14a18e1.png" alt="FeatureDisabled" width="17px"/>
-Password AutoFill | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/7a7bf9fd1930359e7825124d8c1f05ceb14a18e1.png" alt="FeatureDisabled" width="17px"/>
-Password Proximity Requests | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/7a7bf9fd1930359e7825124d8c1f05ceb14a18e1.png" alt="FeatureDisabled" width="17px"/>
-Password Sharing | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/7a7bf9fd1930359e7825124d8c1f05ceb14a18e1.png" alt="FeatureDisabled" width="17px"/>
-Radio Service | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/0d94f7b6e1f8e960277d258b4cb1cc43a50ff326.png" alt="FeatureEnabled" width="17px"/>
-Safari | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/0d94f7b6e1f8e960277d258b4cb1cc43a50ff326.png" alt="FeatureEnabled" width="17px"/>
-Safari Cookies | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/0d94f7b6e1f8e960277d258b4cb1cc43a50ff326.png" alt="FeatureEnabled" width="17px"/>
-Safari Auto Fill | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/7a7bf9fd1930359e7825124d8c1f05ceb14a18e1.png" alt="FeatureDisabled" width="17px"/>
-Safari JavaScript | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/0d94f7b6e1f8e960277d258b4cb1cc43a50ff326.png" alt="FeatureEnabled" width="17px"/>
-Safari Popups | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/7a7bf9fd1930359e7825124d8c1f05ceb14a18e1.png" alt="FeatureDisabled" width="17px"/>
-Safari Fraud Warning | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/0d94f7b6e1f8e960277d258b4cb1cc43a50ff326.png" alt="FeatureEnabled" width="17px"/>
-ScreenShot | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/0d94f7b6e1f8e960277d258b4cb1cc43a50ff326.png" alt="FeatureEnabled" width="17px"/>
-SpellCheck | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/0d94f7b6e1f8e960277d258b4cb1cc43a50ff326.png" alt="FeatureEnabled" width="17px"/>
-Spotlight Internet Results | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/0d94f7b6e1f8e960277d258b4cb1cc43a50ff326.png" alt="FeatureEnabled" width="17px"/>
-System App Removal | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/0d94f7b6e1f8e960277d258b4cb1cc43a50ff326.png" alt="FeatureEnabled" width="17px"/>
-UIApp Installation | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/0d94f7b6e1f8e960277d258b4cb1cc43a50ff326.png" alt="FeatureEnabled" width="17px"/>
-UIConfiguration Profile Installation | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/0d94f7b6e1f8e960277d258b4cb1cc43a50ff326.png" alt="FeatureEnabled" width="17px"/>
-USB Restricted Mode | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/0d94f7b6e1f8e960277d258b4cb1cc43a50ff326.png" alt="FeatureEnabled" width="17px"/>
-Unpaired External Boot To Recovery | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/7a7bf9fd1930359e7825124d8c1f05ceb14a18e1.png" alt="FeatureDisabled" width="17px"/>
-Video Conferencing | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/0d94f7b6e1f8e960277d258b4cb1cc43a50ff326.png" alt="FeatureEnabled" width="17px"/>
-Voice Dialing | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/7a7bf9fd1930359e7825124d8c1f05ceb14a18e1.png" alt="FeatureDisabled" width="17px"/>
-Wallpaper Modification | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/0d94f7b6e1f8e960277d258b4cb1cc43a50ff326.png" alt="FeatureEnabled" width="17px"/>
-Watch Wrist Detection | <img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/0d94f7b6e1f8e960277d258b4cb1cc43a50ff326.png" alt="FeatureEnabled" width="17px"/>
+AirDrop | <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Flat_cross_icon.svg" alt="FeatureDisabled" width="17px"/>
+AirPlay Incoming Pairing Password | <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flat_tick_icon.svg" alt="FeatureEnabled" width="17px"/>
+Air Play Outgoing Pairing Password | <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flat_tick_icon.svg" alt="FeatureEnabled" width="17px"/>
+AirPlay Incoming Requests | <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flat_tick_icon.svg" alt="FeatureEnabled" width="17px"/>
+App Installation | <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flat_tick_icon.svg" alt="FeatureEnabled" width="17px"/>
+App Removal | <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flat_tick_icon.svg" alt="FeatureEnabled" width="17px"/>
+Apple Personalized Advertising | <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Flat_cross_icon.svg" alt="FeatureDisabled" width="17px"/>
+Assistant Siri | <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flat_tick_icon.svg" alt="FeatureEnabled" width="17px"/>
+Assistant (Siri) While Locked | <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Flat_cross_icon.svg" alt="FeatureDisabled" width="17px"/>
+Automatic App Downloads | <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flat_tick_icon.svg" alt="FeatureEnabled" width="17px"/>
+Camera | <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flat_tick_icon.svg" alt="FeatureEnabled" width="17px"/>
+Chat (iMessage) | <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flat_tick_icon.svg" alt="FeatureEnabled" width="17px"/>
+Cloud Backup | <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Flat_cross_icon.svg" alt="FeatureDisabled" width="17px"/>
+Cloud Document Sync | <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Flat_cross_icon.svg" alt="FeatureDisabled" width="17px"/>
+Cloud Keychain Sync | <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Flat_cross_icon.svg" alt="FeatureDisabled" width="17px"/>
+Cloud Photo Library | <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Flat_cross_icon.svg" alt="FeatureDisabled" width="17px"/>
+Definition Lookup | <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flat_tick_icon.svg" alt="FeatureEnabled" width="17px"/>
+Device Name Modification | <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flat_tick_icon.svg" alt="FeatureEnabled" width="17px"/>
+Diagnostic Submission | <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Flat_cross_icon.svg" alt="FeatureDisabled" width="17px"/>
+Dictation | <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flat_tick_icon.svg" alt="FeatureEnabled" width="17px"/>
+Encrypted Backup | <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flat_tick_icon.svg" alt="FeatureEnabled" width="17px"/>
+Enterprise App Trust | <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Flat_cross_icon.svg" alt="FeatureDisabled" width="17px"/>
+Erase Content And Settings | <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flat_tick_icon.svg" alt="FeatureEnabled" width="17px"/>
+Files Network Drive Access | <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Flat_cross_icon.svg" alt="FeatureDisabled" width="17px"/>
+Files USB Drive Access | <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Flat_cross_icon.svg" alt="FeatureDisabled" width="17px"/>
+Find My Device | <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Flat_cross_icon.svg" alt="FeatureDisabled" width="17px"/>
+Find My Friends | <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Flat_cross_icon.svg" alt="FeatureDisabled" width="17px"/>
+Fingerprint For Unlock | <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flat_tick_icon.svg" alt="FeatureEnabled" width="17px"/>
+Game Center | <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flat_tick_icon.svg" alt="FeatureEnabled" width="17px"/>
+InApp Purchases | <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flat_tick_icon.svg" alt="FeatureEnabled" width="17px"/>
+iTunes | <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flat_tick_icon.svg" alt="FeatureEnabled" width="17px"/>
+Limit Ad Tracking | <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flat_tick_icon.svg" alt="FeatureEnabled" width="17px"/>
+Lock Screen Notifications View | <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Flat_cross_icon.svg" alt="FeatureDisabled" width="17px"/>
+Managed Apps Cloud Sync | <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Flat_cross_icon.svg" alt="FeatureDisabled" width="17px"/>
+Multiplayer Gaming | <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flat_tick_icon.svg" alt="FeatureEnabled" width="17px"/>
+Music Service | <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flat_tick_icon.svg" alt="FeatureEnabled" width="17px"/>
+News | <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flat_tick_icon.svg" alt="FeatureEnabled" width="17px"/>
+Paired Watch | <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Flat_cross_icon.svg" alt="FeatureDisabled" width="17px"/>
+Password AutoFill | <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Flat_cross_icon.svg" alt="FeatureDisabled" width="17px"/>
+Password Proximity Requests | <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Flat_cross_icon.svg" alt="FeatureDisabled" width="17px"/>
+Password Sharing | <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Flat_cross_icon.svg" alt="FeatureDisabled" width="17px"/>
+Radio Service | <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flat_tick_icon.svg" alt="FeatureEnabled" width="17px"/>
+Safari | <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flat_tick_icon.svg" alt="FeatureEnabled" width="17px"/>
+Safari Cookies | <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flat_tick_icon.svg" alt="FeatureEnabled" width="17px"/>
+Safari Auto Fill | <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Flat_cross_icon.svg" alt="FeatureDisabled" width="17px"/>
+Safari JavaScript | <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flat_tick_icon.svg" alt="FeatureEnabled" width="17px"/>
+Safari Popups | <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Flat_cross_icon.svg" alt="FeatureDisabled" width="17px"/>
+Safari Fraud Warning | <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flat_tick_icon.svg" alt="FeatureEnabled" width="17px"/>
+ScreenShot | <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flat_tick_icon.svg" alt="FeatureEnabled" width="17px"/>
+SpellCheck | <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flat_tick_icon.svg" alt="FeatureEnabled" width="17px"/>
+Spotlight Internet Results | <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flat_tick_icon.svg" alt="FeatureEnabled" width="17px"/>
+System App Removal | <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flat_tick_icon.svg" alt="FeatureEnabled" width="17px"/>
+UIApp Installation | <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flat_tick_icon.svg" alt="FeatureEnabled" width="17px"/>
+UIConfiguration Profile Installation | <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flat_tick_icon.svg" alt="FeatureEnabled" width="17px"/>
+USB Restricted Mode | <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flat_tick_icon.svg" alt="FeatureEnabled" width="17px"/>
+Unpaired External Boot To Recovery | <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Flat_cross_icon.svg" alt="FeatureDisabled" width="17px"/>
+Video Conferencing | <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flat_tick_icon.svg" alt="FeatureEnabled" width="17px"/>
+Voice Dialing | <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Flat_cross_icon.svg" alt="FeatureDisabled" width="17px"/>
+Wallpaper Modification | <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flat_tick_icon.svg" alt="FeatureEnabled" width="17px"/>
+Watch Wrist Detection | <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flat_tick_icon.svg" alt="FeatureEnabled" width="17px"/>
 
 
 
