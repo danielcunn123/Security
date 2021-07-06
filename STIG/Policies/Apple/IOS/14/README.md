@@ -7,7 +7,7 @@ Additions based on the Apple iOS/iPadOS 14 Security Technical Implementation Gui
 
 Please note, this is **NOT** an official security policy released by the Defence Information Systems Agency, requirements are derived from the National Institute of Standards and Technology (NIST) 800-53 and related documents.
 
-<img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/4b3968c92edc383fc063d68bdb4826b3f888d755.png" alt="FeatureDisabled" width="250px"/>
+<img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/4b3968c92edc383fc063d68bdb4826b3f888d755.png" width="250px"/>
 
 Created due to no avaliable DISA STIG compliant iOS mobileconfig AIO package designed for hardening endpoint Apple iOS device [configuration](https://public.cyber.mil/stigs/downloads)
 
