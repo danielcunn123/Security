@@ -7,7 +7,7 @@ Additions based on the Apple iOS/iPadOS 14 Security Technical Implementation Gui
 
 Please note, this is **NOT** an official security policy released by the Defence Information Systems Agency. Requirements are derived from the National Institute of Standards and Technology (NIST) [800-53](https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final) and related documents.
 
-<img src="https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/4b3968c92edc383fc063d68bdb4826b3f888d755.png" width="250px"/>
+<img src="./media/4b3968c92edc383fc063d68bdb4826b3f888d755.png" width="250px"/>
 
 This configuration package was created due to no avaliable DISA STIG compliant iOS mobileconfig all-in-one package designed for hardening Apple iOS endpoint device [configuration](https://public.cyber.mil/stigs/downloads).
 
@@ -23,7 +23,7 @@ AirPlay Outgoing Pairing Password | <img src="https://upload.wikimedia.org/wikip
 App Removal | <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flat_tick_icon.svg" alt="FeatureEnabled" width="17px"/>
 Apple Personalized Advertising | <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Flat_cross_icon.svg" alt="FeatureDisabled" width="17px"/>
 **Assistant (Siri)** | <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flat_tick_icon.svg" alt="FeatureEnabled" width="17px"/>
-**Assistant (Siri) While Locked** | <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Flat_cross_icon.svg" alt="FeatureDisabled" width="17px"/>
+**Assistant While Locked (Siri)** | <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Flat_cross_icon.svg" alt="FeatureDisabled" width="17px"/>
 Automatic App Downloads | <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flat_tick_icon.svg" alt="FeatureEnabled" width="17px"/>
 **Camera** | <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flat_tick_icon.svg" alt="FeatureEnabled" width="17px"/>
 **Chat (iMessage)** | <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flat_tick_icon.svg" alt="FeatureEnabled" width="17px"/>
@@ -85,6 +85,6 @@ COMING SOON!
 Project currently under development, use at own risk.
 Feel free to make modifications to this security policy.
 
-[![Watch the video](https://raw.githubusercontent.com/danielcunn123/Security/master/STIG/Policies/Apple/IOS/14/media/f50291c07544c2882f8bdf324ded7ca887c831f7.png)](https://youtu.be/RpyJ_l9gflg)
+[![Watch the video](./media/f50291c07544c2882f8bdf324ded7ca887c831f7.png)](https://youtu.be/RpyJ_l9gflg)
 
 [![Watch the video]()](https://youtu.be/Aj9NyRTDb-4)
