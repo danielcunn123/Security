@@ -20,4 +20,6 @@ A. Simple answer, we won't know until its much too late. If encryption/cryptogra
 
 <h2>How</h2>
 
-:)
+More info soon!!
+
+For now, read the 2,819,478 individual 512bit prime numbers avaliable [here](./media/512bit-prime)
