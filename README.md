@@ -3,21 +3,20 @@
 
 <h3>Current Research:</h3>
 
-> [Cryptanalysis](https://github.com/danielcunn123/Security/blob/master/Cryptography/RSADecoder/README.md#rsa-cryptanalysis) - RSA (Rivest-Shamir-Adleman) Algorithim
-> * Generate [RSA-2048](https://github.com/danielcunn123/Security/blob/master/Cryptography/RSADecoder/README.md#-rsa-2048-gen-) key pair
-> * Generate [RSA-1024](https://github.com/danielcunn123/Security/blob/master/Cryptography/RSADecoder/README.md#-rsa-1024-gen-) key pair
->* Pseudorandom [Prime Number Generation](https://github.com/danielcunn123/Security/blob/master/Cryptography/RSADecoder/README.md#prime-number-generation)
->* [Observations](https://github.com/danielcunn123/Security/blob/master/Cryptography/RSADecoder/README.md#observations) and limitations of algorithim
-> * Summary & [Conclusion](https://github.com/danielcunn123/Security/blob/master/Cryptography/RSADecoder/README.md#conclusion)
+> [Cryptanalysis](Cryptography/RSADecoder/README.md#rsa-cryptanalysis) - RSA (Rivest-Shamir-Adleman) Algorithim
+> * Generate [RSA-2048](Cryptography/RSADecoder/README.md#-rsa-2048-gen-) key pair
+> * Generate [RSA-1024](Cryptography/RSADecoder/README.md#-rsa-1024-gen-) key pair
+>* Pseudorandom [Prime Number Generation](Cryptography/RSADecoder/README.md#prime-number-generation)
+>* [Observations](Cryptography/RSADecoder/README.md#observations) and limitations of algorithim
+> * Summary & [Conclusion](Cryptography/RSADecoder/README.md#conclusion)
 
-> Firewall Intrusion Detection & Prevention System
+> [Firewall](Firewall/rules/README.md) Intrusion Detection & Prevention System
 > * Custom network intrusion prevention rules
 > * Secure networks
 > * Prevent zeroday attacks
 > * Solutions avaliable to everyone
-> * *More information avaliable soon!!*
 
-> Antivirus via Local Network Proxy
+> [Antivirus](https://docs.clamav.net) via Local Network Proxy
 > * Understand what devices are doing
 > * Block malware before reaching the device
 > * ClamAV

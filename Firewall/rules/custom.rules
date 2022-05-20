@@ -1,0 +1,3 @@
+alert tcp any any -> any 445 (msg:"BAD Responder"; content:"|01 4e fe 53 4d 42 40 00 01 00 16 00|"; rawbytes; sid:1234; rev:1;)
+alert tcp any 445 -> any any (msg:"BAD Responder"; content:"|01 4e fe 53 4d 42 40 00 01 00 16 00|"; rawbytes; sid:1234; rev:1;)
+alert tcp any any -> any 443 (msg:"Ledger Hardware Wallet Script"; content:"|20 73 63 72 69 70 74 72 75 6e 6e 65 72 2e 61 70 69 2e 6c 69 76 65 2e 6c 65 64 67 65 72 2e 63 6f 6d 00|"; metadata:policy max-detect-ips alert; reference:url,www.ledger.com/; sid:1234; rev:1;)
