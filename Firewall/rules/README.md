@@ -7,8 +7,8 @@ According to the official Snort frequently asked questions:
 "Snort is an open source network intrusion prevention system, capable of performing real-time traffic analysis and packet logging on IP networks. It can perform protocol analysis, content searching/matching, and can be used to detect a variety of attacks and probes, such as buffer overflows, stealth port scans, CGI attacks, SMB probes, OS fingerprinting attempts, and much more."
 ­<br>
 <br>
-Snort is a well-known software solution aimed to defend networks from a variaty of network-based attacks and known & unknown-vulnerabilities through detection and prevention techniques.
-The cornerstone of Snort are the rules, there are many thousends of rules within each ruleset varying in power, precision, and flexibility. Snort provides a free ruleset for basic defense against emerging threats, also paid personal and business rulesets for advanced protection against known and unknown threats for system administrators and end-users.
+Snort is a well-known software solution aimed to defend networks from a variety of network-based attacks, known & unknown-vulnerabilities through detection and prevention techniques.
+The cornerstone of Snort are the rules, there are many thousands of rules within each ruleset varying in power, precision, and flexibility. Snort provides a free ruleset for basic defence against emerging threats, also paid personal and business rulesets for advanced protection against known and unknown threats for system administrators and end-users.
 <br>
 <br>
 
@@ -17,9 +17,10 @@ An example of one rule is:
 There are tens of thousands of rules developed by Snort, Security companies and security researchers with an interest in firewall security. I am not going to go in depth about rules, only discuss the rules within this repository.
 
 <h3>Why</h3>
-The first couple of rules mitigate a private zeroday exploit discovered by myself, I decided to craft a mitigation against this unpatched vulnerability as Microsoft refused to acknowledge the issue as its a "by-design" featrue...
+The first couple of rules mitigate a private zeroday exploit discovered by myself, I decided to craft a mitigation against this unpatched vulnerability as Microsoft refused to acknowledge the issue as it’s a "by-design" feature... back in Jan 2020!
 
 Sensitive information is transmitted throughout the network, useful for attackers specifically capturing credentials, interception is not required for this exploit to work. Currently no Firewall I have tested mitigates this issue, so I needed to learn the Snort ruleset from scratch combined with the SMB packet structure.
+
 
 <h3>Snort Rules</h3>
 
