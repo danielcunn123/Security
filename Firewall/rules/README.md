@@ -17,8 +17,7 @@ An example of one rule is:
 There are tens of thousands of rules developed by Snort, Security companies and security researchers with an interest in firewall security. I am not going to go in depth about rules, only discuss the rules within this repository.
 
 <h3>Why</h3>
-The first couple of rules mitigate a private zeroday exploit discovered by myself, I decided to craft a mitigation against this unpatched vulnerability as Microsoft refused to acknowledge the issue as it’s a "by-design" feature... back in Jan 2020!
-
+The first couple of rules ALERT upon detection of CVE-2022-35770 being exploited throughout the LAN, unfortunatly BLOCK is not possible.
 Sensitive information is transmitted throughout the network, useful for attackers specifically capturing credentials, interception is not required for this exploit to work. Currently no Firewall I have tested mitigates this issue, so I needed to learn the Snort ruleset from scratch combined with the SMB packet structure.
 
 
