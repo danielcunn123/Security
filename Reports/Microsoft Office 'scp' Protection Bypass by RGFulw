@@ -1,0 +1,75 @@
+Microsoft Office 'scp' Protection Bypass by RGFulw
+
+<br>
+
+**Affected Platforms: -**
+Microsoft Windows ≤11
+
+<br>
+
+**Tested On: -**
+Windows 10, 11 (build 17763.253, build 22000.675)
+Office Version 2205 (build 16.0.15225.20172)
+OpenSSH Version OpenSSH_for_Windows_8.1p1, LibreSSL 3.0.2
+
+<br>
+
+**Summary: -**
+Documents obtained via the Secure Shell Copy application bypass critical security procedures within Microsoft Office products expected to occur for every newly obtained Document.
+
+<br>
+
+**Short Description: -**
+Documents obtained via web browsers require the end user to explicitly disable the 'protected' view for individual documents, rather than access documents through 'unprotected' view by default - with a 100% success rate.. No matter the file name nor location stored on the device.
+
+<br>
+
+**Long Description: -**
+Tested on three system configurations:
+No policy
+Microsoft Windows 11 Security Baseline + MSOffice & apps + ADMX
+STIG GPO Windows 11 Security Baseline + MSOffice & apps v2r4 + ADMX
+
+Reproduceable with all GPO configurations and compliance hierarchy.
+The absolute path of C:\Windows\System32\OpenSSH\scp.exe was used, as it’s the same as typing scp in command/terminal window.
+
+Note, this Document is shared within the same network and no Documents are added to the 'Trusted Documents' nor 'Trusted Locations'.
+
+Video demonstrates the generation of two Documents on a Ubuntu machine within the same network, both Documents with newly generated random file names. As shown, the Document obtained via the Web browser on the Windows machine opens in protected view, whereas the Document obtained via Secure Shell Copy results in opening the Document in unprotected view.
+
+It is unsure why Documents obtained via SSH are default trusted without a log, not requiring user interaction. This affects all Microsoft Office applications and file formats, not limited to Word.
+
+
+<br>
+
+**Proof of Concept: -**
+
+=====
+Step 1.) Create document.
+
+Step 2.) Generate a random name for the document.
+
+Step 3.) Retrieve document stored on remote device with the scp/'Secure Shell Copy' application.
+
+Step 4.) Open the document.
+
+
+[PROTECTED VIEW BYPASS SUCCESSFUL]
+
+
+
+VIDEO: -   https://youtu.be/RN1t5_em8-I
+
+<br>
+
+**Expected Result: -**
+All Documents obtained via the Secure Shell Copy utility open in protected view.
+
+<br>
+
+**Observed Result: -**
+All Documents obtained via the Secure Shell Copy utility open in unprotected view, without a log of the event.
+
+<br>
+
+**TIMELINE: -** Discovery | 30th May 2022
