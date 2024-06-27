@@ -57,7 +57,7 @@ large_primes = find_primes_multithreaded(start, end, num_threads)
 end_time = time.time()
 
 # Write primes to a file
-output_file = '512bit_primes.txt'
+output_file = '512bit_primes_range.txt'
 with open(output_file, 'w') as f:
     for prime in large_primes:
         f.write(str(prime) + '\n')

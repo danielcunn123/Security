@@ -40,7 +40,7 @@ def convert_and_write_binaries_multithreaded(input_file, output_file, num_thread
         thread.join()
 
 # Input file containing large prime numbers
-input_file = 'primes.512'
+input_file = 'decimal_primes.txt'
 # Output file for binary representations
 output_file = 'binary_primes.txt'
 # Number of threads to use
@@ -48,6 +48,3 @@ num_threads = 4
 
 # Perform the conversion and write to the output file using multiple threads
 convert_and_write_binaries_multithreaded(input_file, output_file, num_threads)
-
-print(f"Conversion and writing completed using {num_threads} threads.")
-
