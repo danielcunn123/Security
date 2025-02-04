@@ -1,0 +1,21 @@
+EA Origin MFA bypass by RGFulw.
+
+CWE-325: Missing Cryptographic Step
+
+Patched without acknowledgement.
+Coming soon.
+
+
+TIMELINE:
+
+Inital Discovery:       Oct 31 2023
+Repro x4                Oct 31 2023 - Login without OTP
+Report Written:         Oct 31 2023 - 8.1 CVSSv3
+Hackerone Contact:      Oct 31 2023
+Verified:               Nov 7 2024
+Repro x2                Nov 7 2024 - Enabling MFA via settings breaks vuln, unable to repro
+EA Contact:             Nov 7 2024
+More Info Added:        Nov 27 2024
+EA Declined Demo:       Dec 5 2024
+Repro x2                Jan 18 2024 - Not working
+Unacknowledged Patched: Jan 18 2024 - No repro
