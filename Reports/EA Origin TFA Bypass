@@ -1,4 +1,4 @@
-EA Origin MFA bypass by RGFulw.
+EA Origin Two-Step-Verification bypass by RGFulw.
 
 CWE-325: Missing Cryptographic Step
 
@@ -13,9 +13,8 @@ Repro x4                Oct 31 2023 - Login without OTP
 Report Written:         Oct 31 2023 - 8.1 CVSSv3
 Hackerone Contact:      Oct 31 2023
 Verified:               Nov 7 2024
-Repro x2                Nov 7 2024 - Enabling MFA via settings breaks vuln, unable to repro
 EA Contact:             Nov 7 2024
-More Info Added:        Nov 27 2024
+More Info Added:        Nov 27 2024 - Enabling MFA via settings breaks vuln, unable to repro
 EA Declined Demo:       Dec 5 2024
-Repro x2                Jan 18 2024 - Not working
+Repro x2                Jan 18 2024 - Not working with other EA accounts - new accounts do not work due to not enforcing TFA requirement (geo & device)
 Unacknowledged Patched: Jan 18 2024 - No repro
