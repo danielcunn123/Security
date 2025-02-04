@@ -18,10 +18,4 @@ Q. How do we know if this algorithim is broken??
 
 A. Simple answer, we won't know until its much too late. If encryption/cryptographic mechnisims are broken, there is no clear way to know whether the adversary has successfully decrypted the ciphertext or not..
 
-<h2>How</h2>
-
-Too confusing?? Watch [this](https://youtu.be/-ShwJqAalOk) video by Nottingham University.
-
-More info soon!!
-
-For now, read the 2,819,478 individual 512bit prime numbers avaliable [here](./media/512bit-prime)
++++++[Project release](https://github.com/danielcunn123/RSAD)+++++
