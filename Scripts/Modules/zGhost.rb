@@ -12,38 +12,47 @@ class MetasploitModule < Msf::Post
 
   def initialize(info = {})
     super(update_info(info,
-      'Name'           => 'Windows File Explorer Information Disclosure Vulnerabilities (zGhost)',
-      'Description'    => %q{
+      'Name'  => 'Windows File Explorer Information Disclosure Vulnerabilities (zGhost)',
+      'Description' => %q{
         This module exploits a vulnerability in the handling of Windows shortcuts, zipfiles and directories.
         Loading arbitrary icons via non-existent SMB shares or otherwise corrupted directories, shortcuts and
         zip contents can lead to disclosure of user session credentials.
 
-        Either create a zip payload containing necessary shortcut(s), or a directory containing malformed 
-        configuration, then drop the payload to a target directory.
-
-        Run 'auxiliary/server/capture/smb' and 'auxiliary/spoof/llmnr/llmnr_response' modules to handle the requests broadcasted from
-        these payloads.
+        The module can generate a ZIP file with shortcuts or a directory with malformed configuration.
+        The ZIP (CVE Bypass) can be used to drop the payload on the target machine, while the directory can be used to create
+        a folder with malformed configuration that will trigger the vulnerability when accessed.
+        
+        The module can also check if the October 2022 update is installed, which mitigates this vulnerability.
       },
-      'Author'         =>
+      'Author'  =>
         [
           'RGFulw'  #Vuln & Module
         ],
-      'References'     =>
+      'References'  =>
         [
           ['CVE', '2022-35770'],
           ['URL', 'https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2022-35770'],
           ['URL', 'https://youtu.be/b0FMKmeacI0'], # Demo
         ],
-      'DisclosureDate' => 'Oct 11 2022',
-      'License'        => MSF_LICENSE,
-      'Platform'       => [ 'win' ],
-      'Arch'           => [ARCH_ANY, ARCH_X86, ARCH_X64],
-      'Targets'        =>
-       [
-         [ 'Windows', { 'Arch' => ARCH_ANY } ],
-         [ 'Windows x64', { 'Arch' => ARCH_X64 } ],
-         [ 'Windows x86', { 'Arch' => ARCH_X86 } ]
-       ],
+      'DisclosureDate'  => 'Oct 11 2022',
+      'Version'         => '$Revision: 1.2 $',
+      'Notes'           => %q{
+        Run 'auxiliary/server/capture/smb' and 'auxiliary/spoof/llmnr/llmnr_response' modules to handle the requests broadcasted from
+        these payloads.
+      },
+      'Stability'       => [ CRASH_SAFE, REPEATABLE_SESSION ],
+      'Reliability'     => [ EXPLOITABLE_TOKEN ],
+      'SideEffects'     => [ IO_ON_DISK, ARTIFACTS_ON_DISK ],
+      'Compatibility'   => [ POST_MODULE, FILE_FORMAT ]
+      'License'         => MSF_LICENSE,
+      'Platform'        => [ 'win' ],
+      'Arch'            => [ARCH_ANY, ARCH_X86, ARCH_X64],
+      'Targets'         =>
+        [
+          [ 'Windows', { 'Arch'     => ARCH_ANY } ],
+          [ 'Windows x64', { 'Arch' => ARCH_X64 } ],
+          [ 'Windows x86', { 'Arch' => ARCH_X86 } ]
+        ],
       'DefaultTarget'  => 1, # 64-bit
       'SessionTypes'   => [ 'meterpreter' ]
     ))
