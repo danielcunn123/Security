@@ -1,20 +1,42 @@
-EA Origin Two-Step-Verification bypass by RGFulw.
+EA Origin multi-factor-authentication Bypass Vulnerability
 
+Summary
+
+Origin is vulnerable to a multi-factor-authentication bypass when exceeding a time limit upon logging in on a new device.
+
+Base
 CWE-325: Missing Cryptographic Step
-
-Patched without acknowledgement.
-Coming soon.
+CWE-305: Missing Critical Step in Authentication
 
 
-TIMELINE:
+Description
+An attacker can gain access to a 2FA enabled account with only the login credentials.
+Continuisly bypassing the verification when logging in at the same location.
 
-Inital Discovery:       Oct 31 2023
-Repro x4                Oct 31 2023 - Login without OTP
-Report Written:         Oct 31 2023 - 8.1 CVSSv3
-Hackerone Contact:      Oct 31 2023
-Verified:               Nov 7 2024
-EA Contact:             Nov 7 2024
-More Info Added:        Nov 27 2024 - Enabling MFA via settings breaks vuln, unable to repro
-EA Declined Demo:       Dec 5 2024
-Repro x2                Jan 18 2024 - Not working with other EA accounts - new accounts do not work due to not enforcing TFA requirement (geo & device)
-Unacknowledged Patched: Jan 18 2024 - No repro
+Expected
+What is expected to occur when logging into Origin on a new device, requires an aditional factor of authentication.
+
+Result
+It is possible to log into an EA account on Origin and gain full account takeover without a single email or SMS being sent. 
+
+Long Description
+There exists a vulnerability where if a user logs into their account, are greeted with a 2FA page requesting an email or SMS be sent to verify the login. Upon waiting aproximatly 24 hours at this page without requesting verification be sent, the application will crash when pressing any button.
+Reopening Origin requires the user to relogin with credentials, Origin will error saying something is wrong and auto-exit crashing one more time, reopening Origin requires user credentials although upon logging in, no 2FA is sent.
+
+This is a flaw with the client-side application timeout causing a few application crashes affecting the login sequence, EA back-end servers accepting unverifed 2FA logins.
+
+The following services are currently affected:
++  Origin (EA app v13.335.0.5848)
+-  WebApplication (EA login page https://signin.ea.com)
+
+Timeline:
+    Discovered Oct 31 2023
+    Report written Oct 31 2023 - Severity 8.1
+    Disclosed to Hackerone Oct 31 2023 - N/A
+    Verified Nov 7 2024
+    Report written Nov 7 2024
+    Disclosed to ZDI Nov 7 2024
+    ZDI Declined case Nov 9 2024
+    Disclosed to security@ea.com 9 Nov 2024
+    EA Acknowledgement 13 Nov 2024 
+    Case Dismissed - Unable to reproduce
