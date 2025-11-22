@@ -27,3 +27,10 @@ Reproduce:
 Reccomendation:
 Remove insecure accounts, credentials.
 Subsitute use of Secure File Transfer Protocol for update download and handling.
+
+
+Timeline:
+    Discovered Nov 8 2025
+    Report written Nov 8 2025 - Severity P1
+    Bugcrowd Declined case Nov 9 2024
+    Case Dismissed - Unable to reproduce
