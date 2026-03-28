@@ -1,0 +1,20 @@
+Mozilla Firefox <72 Information Disclosure
+
+
+Versions of Firefox prior to 72 and all other web browsers are vulnerable to disclosing HTTP requests during the initial connection to a website.
+
+When a user connects to a new website, simply typing the hostname in the URL search bar without specifying the connection protocol, will result in forwarding an initial HTTP request to establish a connection and determine the default port/protocol used to communicate with the remote server.
+
+Expectation:
+When DNS-Over-HTTPS is enabled this encrypts DNS queries between the host and domain server - whether it be a local DNS server or remote. 
+With this feature enabled, it is safe to assume plaintext hostnames should not appear in the network logs.
+
+Result:
+When not explicitly specifying the initial connection to the remote server, the browser defaults to HTTP - disclosing the queried hostname.
+
+Recommendation
+Enforce HTTPS in browser settings as a non-default browser feature
+
+Fix
+Implement Enable HTTPS-only-mode as a non-default browser feature
+Other browsers such as Google Chrome added the HTTPS-only feature
