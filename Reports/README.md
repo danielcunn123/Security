@@ -37,4 +37,4 @@ Vulnerability | Resolved
 [Microsoft Office Auto-Execution Protection Bypass](../Reports/Microsoft%20Office%20Execution%20Protection%20Bypass.md) | <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Flat_cross_icon.svg" alt="FeatureDisabled" width="17px"/>
 [Metasploit Reverse Session Takeover](../Reports/Metasploit%20Reverse%20Session%20Takeover.md) | <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Flat_cross_icon.svg" alt="FeatureDisabled" width="17px"/>
 [Microsoft Windows NTLM Spoofing Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-35770) | <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flat_tick_icon.svg" alt="FeatureEnabled" width="17px"/> CVE-2022-35770
-[Microsoft Windows NTLM Spoofing Vulnerability#2]() | Undisclosed
+[Microsoft Windows NTLM Spoofing Vulnerability#2]() | <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Flat_cross_icon.svg" alt="FeatureDisabled" width="17px"/> [Zeroday module](https://github.com/danielcunn123/Security/blob/master/Scripts/Modules/zGhost.rb)
